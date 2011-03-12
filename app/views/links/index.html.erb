@@ -1,0 +1,22 @@
+<%= flash[:error] %>
+
+<% form_for @link, :as => :link, :url => { :action => "create" } do |f| %>
+  <p>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :slug %>
+    <%= f.text_field :slug %>
+  </p>
+  <p>  
+    <%= submit_tag "Create" %>
+  </p>  
+<% end %>
+
+
+<% @links.each do |l| %>
+  <p>
+    <a href='<%= l.url %>'><%= l.title %> (<%= l.slug %>)</a> - <%= l.clicks %> clicks
+  </p>  
+<% end%>

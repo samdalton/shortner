@@ -1,0 +1,15 @@
+This is a super simple, no frills URL shortner.
+
+Set a username and password in config/credentials.yml.
+
+If you're not running this on heroku (works a treat on their free plan, with the free mongo HQ add on), then you'll need to configure it with your mongo db settings.
+
+Fire up the app and head to /links. Enter the username/password you set. 
+Create a link with a title of 'default'. This will be the default url that the app will redirect to if no url slug is provided. For example,
+
+http://myshortner.com/fR5 will take you to the link you created with the title fR5.
+http://myshortner.com will take you to the link you created with the title 'default' - the, um,  default url, I guess.
+
+Visits for each slug are tracked, and shown on the links page. (I did really mean no frills..)
+
+That's it! If you make it better, which won't be hard, I'll be happy to merge in changes.
